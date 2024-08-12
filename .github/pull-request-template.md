@@ -12,7 +12,7 @@ Please describe the tests that you ran to verify your changes.
 ## Dependencies
 Please list any dependencies that need to be installed for this code to be run. API changes, .env file updates, etc...
 ## Checklist
-- [ ] My code follows the [style guidelines of this project](https://theagilehub.atlassian.net/wiki/spaces/HWE/pages/1254424814/Front+End+Coding+Standards+and+Best+Practices)
+
 - [ ] I have performed a self-review of my own code in local and dev environment
 - [ ] My changes generate no new warnings
 - [ ] I have added tests that prove my fix is effective or that my feature works
