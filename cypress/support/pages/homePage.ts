@@ -1,11 +1,8 @@
-
 const randomEmail = Math.random().toString(36) + "@test.com"
-
 
 class HomePage {
 
-
-    elements = { 
+      elements = { 
         signUpLink: () => cy.get('.shop-menu > .nav > :nth-child(4) > a'),
         nameTxt: () => cy.get('[data-qa="signup-name"]'),
         signUpEmailTxt: () => cy.get('[data-qa="signup-email"]'),

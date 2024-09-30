@@ -5,9 +5,7 @@ class CartPage {
         proceedBtn: () => cy.get('.col-sm-6 > .btn'),
         placeOrderBtn: () => cy.get(':nth-child(7) > .btn'),
         cartColumn: () => cy.get('p.cart_total_price'),
-
-    }
-
+   }
     cartLinkClick() {
         this.elements.cartLink().click()
     }

@@ -69,25 +69,14 @@ Cypress.Commands.add('invalidLogin', () => {
 Cypress.Commands.add('sumTotal', () => {
     let totalSum = 0;
     cy.get('p.cart_total_price').each(($el, index, $list) => {
-        // Check if the current element is not the last one
         if (index !== $list.length - 1) {
-            // Extract the text from each element
             const priceText = $el.text();
-
-            // Remove letters, spaces, and non-numeric characters except for decimal points and negative signs
             const rawPrice = priceText.replace(/[^\d-]/g, '');
-            console.log(rawPrice)
-            // Convert the extracted value to a float and adjust it 
             const price = parseInt(rawPrice);
-            console.log(price)
-            // Add the price to the total sum
             totalSum += price;
         }
     }).then(() => {
-        // After iterating through all elements (except the last one), log the total sum
         cy.log('Total Sum:', totalSum);
-
-        // Example assertion
         expect(totalSum).to.be.greaterThan(0); // Adjust the assertion as needed
     });
 })
